@@ -1,0 +1,49 @@
+[project]
+name = "data_pipeline"
+description="A package for interfacing with NREL's Comstock & ResStock models"
+version="0.1.0"
+authors=[
+    { name = "Dyami Andrews" }
+]
+requires-python = ">=3.9,<3.11"
+
+dependencies=[
+    "pyarrow",
+    "dask",
+    "s3fs",
+    "matplotlib",
+    "geopandas",
+    "h3",
+    "scikit-learn",
+    "loguru",
+    "pydantic<2",
+    "pytest",
+    "pylint",
+    "isort",
+    "ipykernel"
+]
+
+[project.optional-dependencies]
+primary=[
+]
+
+dev=[
+    "darker",
+    "pytest",
+    "pytest-sugar",
+    ] 
+
+[tool.setuptools]
+# ...
+# By default, include-package-data is true in pyproject.toml, so you do
+# NOT have to specify this line.
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json","*.yaml"]
+
+[tool.black]
+line_length = 120
