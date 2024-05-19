@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: data_pipeline
+Version: 0.1.0
+Summary: A package for interfacing with NREL's Comstock & ResStock models
+Author: Dyami Andrews
+Requires-Python: <3.11,>=3.9
+Requires-Dist: pyarrow
+Requires-Dist: dask
+Requires-Dist: s3fs
+Requires-Dist: matplotlib
+Requires-Dist: geopandas
+Requires-Dist: h3
+Requires-Dist: scikit-learn
+Requires-Dist: loguru
+Requires-Dist: pydantic<2
+Requires-Dist: pytest
+Requires-Dist: pylint
+Requires-Dist: isort
+Provides-Extra: primary
+Provides-Extra: dev
+Requires-Dist: darker; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-sugar; extra == "dev"
