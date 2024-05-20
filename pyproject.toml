@@ -5,7 +5,7 @@ version="0.1.0"
 authors=[
     { name = "Dyami Andrews" }
 ]
-requires-python = ">=3.9,<3.11"
+requires-python = ">=3.9,<3.12"
 
 dependencies=[
     "pyarrow",
@@ -16,11 +16,12 @@ dependencies=[
     "h3",
     "scikit-learn",
     "loguru",
-    "pydantic<2",
+    "pydantic>=2",
     "pytest",
     "pylint",
     "isort",
-    "ipykernel"
+    "ipykernel",
+    "requests",
 ]
 
 [project.optional-dependencies]

@@ -34,11 +34,6 @@ class AbstractArtifactGenerator(AbstractTransformer[T, S], ABC, Generic[T, S, A]
     stack_id: str
     transformer_id: str
 
-    def __init__(self, cache: ArtifactCacheSingleton, stack_id: str, transformer_id: str):
-        self.cache = cache
-        self.stack_id = stack_id
-        self.transformer_id = transformer_id
-
     def transform(self, data: T) -> T:
         artifact = self.create_artifact(data)
         self.cache.cache(stack_id=self.stack_id, transformer_id=self.transformer_id, artifact=artifact)

@@ -12,14 +12,6 @@ class PandasTransformer(AbstractTransformer[pd.DataFrame, PandasSchema]):
     transform_function: Callable[[pd.DataFrame], pd.DataFrame]
     schema_function: Callable[[PandasSchema], PandasSchema]
 
-    def __init__(
-        self,
-        transform_function: Callable[[pd.DataFrame], pd.DataFrame],
-        schema_function: Callable[[PandasSchema], PandasSchema],
-    ):
-
-        self.transform_function = transform_function
-        self.schema_function = schema_function
 
     def transform(self, data: pd.DataFrame) -> pd.DataFrame:
         return self.transform_function(data)

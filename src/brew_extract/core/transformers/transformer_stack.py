@@ -10,10 +10,6 @@ class TransformerStack(AbstractDataSource[T, S], Generic[T, S]):
     source: AbstractDataSource[T, S]
     transformers: list[AbstractTransformer[T, S]]
 
-    def __init__(self, source: AbstractDataSource, transformers: list[AbstractTransformer[T, S]]):
-        self.source = source
-        self.transformers = transformers
-
     @classmethod
     def empty(cls, source: AbstractDataSource) -> "TransformerStack":
         return cls(source=source, transformers=[])
@@ -33,7 +29,6 @@ class TransformerStack(AbstractDataSource[T, S], Generic[T, S]):
     def id(self) -> str:
         return str(len(self.transformers))
 
-    # FIXME: not sure why this is giving a type error
     @property
     def schema(self) -> S:
         schema = self.source.schema

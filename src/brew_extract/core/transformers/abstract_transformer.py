@@ -5,7 +5,7 @@ from ..base_class import BaseClass
 from ..type_vars import S, T
 
 
-class AbstractTransformer(ABC, Generic[T, S], BaseClass):
+class AbstractTransformer(ABC, BaseClass, Generic[T, S]):
 
     @abstractmethod
     def transform(self, data: T) -> T:

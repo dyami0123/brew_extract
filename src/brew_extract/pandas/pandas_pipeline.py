@@ -7,7 +7,7 @@ from ..core.type_vars import A
 from .pandas_schema import PandasSchema
 
 
-class PandaPipelineBuilder(PipelineBuilder[pd.DataFrame, PandasSchema]):
+class PandasPipelineBuilder(PipelineBuilder[pd.DataFrame, PandasSchema]):
     def add_artifact(
         self, stack_id: str, artifact_class: Type[AbstractArtifactGenerator[pd.DataFrame, PandasSchema, A]]
     ) -> None:

@@ -1,4 +1,6 @@
 # Mac Files
+**/.DS_Store
+# ignore ds store files and other mac files anywhere
 .DS_Store
 
 # Byte-compiled / optimized / DLL files

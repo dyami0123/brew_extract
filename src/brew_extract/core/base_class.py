@@ -1,9 +1,9 @@
 import logging
-from dataclasses import dataclass
+
+import pydantic
 
 
-@dataclass  # TODO: finalize whether to use pydantic or dataclass
-class BaseClass:
+class BaseClass(pydantic.BaseModel):
 
     class Config:
         arbitrary_types_allowed = True

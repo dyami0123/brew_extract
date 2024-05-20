@@ -9,7 +9,7 @@ class ArtifactCacheSingleton:
     _caches: dict[Type, AbstractArtifactCache]
 
     def __new__(cls, *args, **kwargs):
-        if not cls._instance:
+        if not getattr(cls, "_instance", None):
             cls._instance = super(ArtifactCacheSingleton, cls).__new__(cls, *args, **kwargs)
         return cls._instance
 

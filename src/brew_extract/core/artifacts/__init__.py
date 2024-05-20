@@ -1,6 +1,6 @@
-from .abstract_artifact_cache import AbstractArtifactCache  # type: ignore
-from .abstract_artifact_generator import AbstractArtifactGenerator  # type: ignore
-from .artifact_cache_singleton import ArtifactCacheSingleton  # type: ignore
+from .abstract_artifact_cache import AbstractArtifactCache  # noqa
+from .abstract_artifact_generator import AbstractArtifactGenerator  # noqa
+from .artifact_cache_singleton import ArtifactCacheSingleton  # noqa
 
 """
 
