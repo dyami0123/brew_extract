@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import Generic
 
-from .base_class import BaseClass
-from .type_vars import S, T
+from ..base_class import BaseClass
+from ..type_vars import S, T
 
 
 class AbstractTransformer(ABC, Generic[T, S], BaseClass):

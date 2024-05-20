@@ -1,9 +1,9 @@
 from copy import deepcopy
 from typing import Generic
 
+from ..type_vars import S, T
 from .abstract_data_source import AbstractDataSource
 from .abstract_transformer import AbstractTransformer
-from .type_vars import S, T
 
 
 class TransformerStack(AbstractDataSource[T, S], Generic[T, S]):
